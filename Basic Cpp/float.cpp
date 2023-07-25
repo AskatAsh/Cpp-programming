@@ -8,6 +8,7 @@ int main(){
     // // cout<<x<<endl;
     // cout<<fixed<<setprecision(6)<<x<<endl;
     char name[50];
-    cin>>name; // this takes input without spaces
+    //cin>>name; // this takes input without spaces
+    cin.getline(name,50); // this takes input with spaces
     cout<<name<<endl;
 }
