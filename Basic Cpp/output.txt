@@ -1,5 +1,1 @@
-Hello World..!
-Hello, I'm Askat.
-a = 24
-b = 36
-a+b = 60
+12 and 12 are equal
