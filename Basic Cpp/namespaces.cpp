@@ -1,12 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 namespace one{
+    int a = 24;
     void hello(){
         cout<<"Hello World..!"<<endl;
     }
 }
 namespace two{
-    void hello(){
+    int b = 36;
+    void hello2(){
         cout<<"Hello, I'm Askat."<<endl;
     }
 }
@@ -17,6 +19,10 @@ int main(){
     // two::hello();
 
     hello();
+    hello2();
+    cout<<"a = "<<a<<endl;
+    cout<<"b = "<<b<<endl;
+    cout<<"a+b = "<<a+b<<endl;
 
     return 0;
 }
