@@ -3,16 +3,13 @@ using namespace std;
 int main(){
     int i,n,first,second,fibo;
     cin>>n;
-    for(i=0;i<n;i++)
+    for(i=1;i<n;i++)
     {
-        if(i==0)
+        if(i<=1)
         {
             first = 0;
-            cout<<first<<" ";
-        }
-        else if(i==1){
             second = 1;
-            cout<<second<<" ";
+            cout<<first<<" "<<second<<" ";
         }
         else{
             fibo = first + second;
