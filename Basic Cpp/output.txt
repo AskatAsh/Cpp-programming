@@ -1,2 +1,2 @@
-Max is : 15
-Min is : 10
+Max is : 19
+Min is : 15
