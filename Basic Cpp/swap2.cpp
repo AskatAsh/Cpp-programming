@@ -10,9 +10,10 @@ int main()
         for(int j=i+1;j<n;j++)
         {
             if(num[i]>num[j]){
-                int temp = num[i];
-                num[i] = num[j];
-                num[j] = temp;
+                //int temp = num[i];
+                //num[i] = num[j];
+                //num[j] = temp;
+                swap(num[i], num[j]);
             }
         }
     }
