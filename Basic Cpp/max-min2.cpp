@@ -12,9 +12,10 @@ int main()
     int mx = arr[0];
     for(int i=0;i<5;i++)
     {
-        if(arr[i]>mx){
+        /*if(arr[i]>mx){
             mx = arr[i];
-        }
+        }*/
+        mx = max(mx,arr[i]);
     }
     cout<<"max = "<<mx<<endl;
     //int a=10,b=20,c=40,d=17;
