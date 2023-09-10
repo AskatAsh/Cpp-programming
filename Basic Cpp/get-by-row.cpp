@@ -14,12 +14,10 @@ int main()
     }
     cout<<"enter required row: ";
     cin>>my_row;
-    for(i=my_row; i==my_row; i++)
+
+    for(j=0; j<col; j++)
     {
-        for(j=0; j<col; j++)
-        {
-            cout<<num[my_row][j]<<" ";
-        }
+        cout<<num[my_row][j]<<" ";
     }
 }
 
