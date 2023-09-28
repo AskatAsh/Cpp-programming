@@ -3,16 +3,16 @@ using namespace std;
 int main(){
     int n;
     cin>>n;
-    int i=0;
-    while(i<n){
+    int i=n;
+    while(i>0){
         int j=n;
         while(j>0){
-            // cout<<i<<" ";
-            cout<<j<<" ";
+            cout<<i<<" ";
+            // cout<<j<<" ";
             j--;
         }
         cout<<endl;
-        i++;
+        i--;
     }
 }
 
