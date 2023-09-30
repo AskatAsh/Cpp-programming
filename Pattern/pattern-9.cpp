@@ -9,7 +9,9 @@ int main(){
         //     cout<<j<<" ";
         // }
         for(int j=1;j<=n;j++){
-            cout<<char(i+64)<<" ";
+            // cout<<char(i+64)<<" ";
+            char ch = 'A'+i-1;
+            cout<<ch<<" ";
         }
         cout<<endl;
 
