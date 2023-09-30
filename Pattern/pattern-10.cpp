@@ -9,9 +9,9 @@ int main(){
         //     cout<<j<<" ";
         // }
         for(int j=1;j<=n;j++){
-            // cout<<char(i+64)<<" ";
-            char ch = 'A'+j-1;
-            cout<<ch<<" ";
+            cout<<char(j+64)<<" ";
+            // char ch = 'A'+j-1;
+            // cout<<ch<<" ";
         }
         cout<<endl;
 
@@ -19,7 +19,7 @@ int main(){
 }
 
 // output
-// A A A A 
-// B B B B 
-// C C C C 
-// D D D D 
+// A B C D 
+// A B C D 
+// A B C D 
+// A B C D 
