@@ -19,7 +19,7 @@ int main(){
 }
 
 // output
-// 1 
-// 2 3 
-// 3 4 5 
-// 4 5 6 7 
+// A A A A 
+// B B B B 
+// C C C C 
+// D D D D 
