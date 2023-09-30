@@ -4,10 +4,10 @@ int main(){
     int n;
     cin>>n;
     for(int i=1;i<=n;i++){
-        int x = i;
-        for(int j=1;j<=i;j++){
-            cout<<x<<" ";
-            x++;
+        // int x = i;
+        for(int j=0;j<i;j++){
+            cout<<i+j<<" ";
+            // x++;
         }
         cout<<endl;
     }
