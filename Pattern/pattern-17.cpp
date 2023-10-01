@@ -5,12 +5,13 @@ int main(){
     cin>>n;
    
     for(int i=1;i<=n;i++){
-        // char x = 'A'+i-1;
+        
+        char x = 'A'+n-i;
         for(int j=1;j<=i;j++){
             // int x = n-i+j;
-            char x = 'A'+n-i+j-1;
+            // char x = 'A'+n-i+j-1;
             cout<<x<<" ";
-            // x++;
+            x++;
         }
         cout<<endl;
     }
