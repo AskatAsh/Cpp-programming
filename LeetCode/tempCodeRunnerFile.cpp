@@ -1,0 +1,2 @@
+l;
+    cout<<product<<endl;
