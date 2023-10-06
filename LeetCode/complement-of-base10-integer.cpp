@@ -3,13 +3,13 @@ using namespace std;
 int main(){
     int n;
     cin>>n;
-
-    int bit = n&1;
-    if(bit == 1){
-        bit = 0;
+    int m = n;
+    int temp = 0;
+    while(m!=0){
+        temp = (temp << 1) | 1;
+        m = (m >> 1);
     }
-    else{
-        bit = 1;
-    }
-    cout<<bit<<endl;
+    int ans = (~n) & temp;
+    cout<<ans<<endl;
+    
 }
