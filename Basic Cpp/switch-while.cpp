@@ -13,7 +13,8 @@ int main(){
                 break;
             case 3:
                 cout<<"You choose option 3. exit program"<<endl;
-                return 0;
+                // return 0;
+                exit(0);
             default:
                 cout<<"Invalid choice. Try again"<<endl;
         }
