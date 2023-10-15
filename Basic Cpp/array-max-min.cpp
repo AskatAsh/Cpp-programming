@@ -2,22 +2,24 @@
 using namespace std;
 
 int max(int arr[], int size){
-    int max = INT_MIN;
+    int maxNum = INT_MIN;
     for(int i=0;i<size;i++){
-        if(arr[i]>max){
-            max = arr[i];
-        }
+        maxNum = max(maxNum, arr[i]);
+        // if(arr[i]>max){
+        //     max = arr[i];
+        // }
     }
-    return max;
+    return maxNum;
 }
 int min(int arr[], int size){
-    int min = INT_MAX;
+    int minNum = INT_MAX;
     for(int i=0;i<size;i++){
-        if(arr[i] < min){
-            min = arr[i];
-        }
+        minNum = min(minNum, arr[i]);
+        // if(arr[i] < min){
+        //     min = arr[i];
+        // }
     }
-    return min;
+    return minNum;
 }
 int main(){
     int numbers[5] = {12, 7, 3, 9, 23};
