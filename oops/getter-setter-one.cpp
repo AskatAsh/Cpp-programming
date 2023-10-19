@@ -4,18 +4,32 @@ using namespace std;
 class Example{
     private:
         int x;
-
+        int pass;
     public:
-        void setter(int a){
-            x = a;
+        Example(int p){
+            pass = p;
         }
-        int getter(){
-            return x;
+        void setter(int a, int p){
+            if(pass == p){
+                x = a;
+            }
+            else{
+                cout<<"Password incorrect"<<endl;
+            }
+        }
+        int getter(int p){
+            if(pass == p){
+                return x;
+            }
+            else{
+                cout<<"Password incorrect"<<endl;
+                return -1;
+            }
         }
 };
 
 int main(){
-    Example a;
-    a.setter(32067);
-    cout<<a.getter()<<endl;
+    Example a(1234);
+    a.setter(32067, 1234);
+    cout<<a.getter(1234)<<endl;
 }
