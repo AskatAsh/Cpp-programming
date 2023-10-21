@@ -4,8 +4,8 @@ int main(){
     string str;
     str = "abcdefghijklmnopqrst";
     
-    string:: iterator it;
-    for(it = str.begin(); it != str.end(); it++){
+    string::reverse_iterator it;
+    for(it = str.rbegin(); it != str.rend(); it++){
         cout<<*it<<endl;
     }
 }
