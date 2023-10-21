@@ -9,5 +9,7 @@ int main(){
     // cout<<str.size()<<endl;
     str.resize(5);
     cout<<str<<endl;
-    cout<<"after resize "<<str.length()<<endl;    
+    cout<<"after resize "<<str.length()<<endl;
+    str.clear();
+    cout<<str<<" "<<str.size()<<endl;    
 }
