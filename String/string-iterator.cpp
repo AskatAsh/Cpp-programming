@@ -5,7 +5,7 @@ int main(){
     str = "abcdefghijklmnopqrst";
     
     // string::reverse_iterator it;
-    for(string::reverse_iterator it = str.rbegin(); it != str.rend(); it++){
+    for(auto it = str.rbegin(); it != str.rend(); it++){
         cout<<*it<<endl;
     }
 }
