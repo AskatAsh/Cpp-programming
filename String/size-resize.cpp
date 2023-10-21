@@ -12,4 +12,10 @@ int main(){
     cout<<"after resize "<<str.length()<<endl;
     str.clear();
     cout<<str<<" "<<str.size()<<endl;    
+    if(str.empty()){
+        cout<<"yes"<<endl;
+    }
+    else{
+        cout<<"no"<<endl;
+    }
 }
