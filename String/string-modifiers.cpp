@@ -8,6 +8,7 @@ int main(){
     // str.pop_back();
     // str.push_back('p');
     // str.insert(2, "mno");
-    str.erase(4, 2);
-    cout<<str<<endl;
+    // str.erase(4, 2);
+    swap(str, str2);
+    cout<<str<<" "<<str2<<endl;
 }
