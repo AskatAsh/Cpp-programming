@@ -5,7 +5,8 @@ int main(){
     string str2 = "xyz";
     // str.assign("xyz");
     // str.append(str2);
-    str.pop_back();
-    str.push_back('p');
+    // str.pop_back();
+    // str.push_back('p');
+    str.insert(2, "mno");
     cout<<str<<endl;
 }
