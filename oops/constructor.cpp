@@ -22,6 +22,13 @@ public:
         this->level = level;
     }
 
+    // copy constructor
+    Hero(Hero &titan){
+        cout<<"Copy constructor called"<<endl;
+        this->health = titan.health;
+        this->level = titan.level;
+    }
+
     int getHealth()
     {
         return health;
@@ -40,16 +47,26 @@ public:
     }
     void print()
     {
-        cout << "Health is : " << health << endl;
-        cout << "Level is : " << level << endl;
+        cout << "Health is : " << this->health << endl;
+        cout << "Level is : " << this->level << endl;
     }
 };
 int main()
 {
-    Hero ash(100, 'L');
+    Hero ss(55, 'S');
+    // ss.print();
+
+    // copy constructor
+    // Hero pp(ss);
+    // Hero pp(ss);
+    ss.print();
+    
+
+
+    // Hero ash(100, 'L');
     // cout << "Address of ash: " << &ash << endl;
     // cout<< "Health of ash: "<<ash.getHealth()<<endl;
-    ash.print();
+    // ash.print();
     // cout << "hello" << endl;
     // Hero h1;
     // Hero *a1 = new Hero();
