@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 class Hero
 {
@@ -7,11 +7,13 @@ private:
 
 public:
     char level;
+    char *name;
 
     // created default constructor
     Hero()
     {
         cout << "Hero Constructor called" << endl;
+        name = new char[100];
     }
 
     // parameterized constructor
@@ -24,6 +26,10 @@ public:
 
     // copy constructor
     Hero(Hero &titan){
+        char *ch = new char[strlen(titan.name)+1];
+        strcpy(ch, titan.name);
+        this->name = ch;
+
         cout<<"Copy constructor called"<<endl;
         this->health = titan.health;
         this->level = titan.level;
@@ -45,31 +51,37 @@ public:
     {
         level = ch;
     }
+    void setName(char name[]){
+        strcpy(this->name, name);
+    }
     void print()
     {
-        cout << "Health is : " << this->health << endl;
-        cout << "Level is : " << this->level << endl;
+        cout << "[ Name : " << this->name << ", ";
+        cout << "Health : " << this->health << ", ";
+        cout << "Level : " << this->level << " ]";
+        cout<<endl<<endl;
     }
 };
 int main()
 {
-    Hero ss(55, 'S');
-    // ss.print();
+    Hero hero1;
+    hero1.setHealth(10);
+    hero1.setLevel('D');
+    char name[10] = "Askat";
+    hero1.setName(name);
+    hero1.print();
 
-    // copy constructor
-    // Hero pp(ss);
-    // Hero pp(ss);
-    ss.print();
-    
+    // Hero hero2;
+    // hero2 = hero1;
+    // hero2.print();
 
+    // calling copy constructor
+    Hero hero2(hero1);
+    hero2.print();
+    hero1.name[0] = 'B';
 
-    // Hero ash(100, 'L');
-    // cout << "Address of ash: " << &ash << endl;
-    // cout<< "Health of ash: "<<ash.getHealth()<<endl;
-    // ash.print();
-    // cout << "hello" << endl;
-    // Hero h1;
-    // Hero *a1 = new Hero();
-    // cout << "Askat" << endl;
+    hero1.print();
+    hero2.print();
+
     return 0;
 }
