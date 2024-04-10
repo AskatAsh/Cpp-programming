@@ -80,6 +80,8 @@ int main()
     hero2.print();
     hero1.name[0] = 'B';
 
+    hero2 = hero1;
+
     hero1.print();
     hero2.print();
 
