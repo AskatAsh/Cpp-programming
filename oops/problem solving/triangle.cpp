@@ -8,7 +8,7 @@ class Triangle{
 
     Triangle(double a, double b, double c): sideA(a), sideB(b), sideC(c){}
 
-    void triNature(){
+    void triangleType(){
         if(sideA == sideB && sideB == sideC){
             cout<<"The Triangle is equilateral."<<endl;
         }else if(sideA == sideB || sideA == sideC || sideB == sideC){
@@ -21,5 +21,5 @@ class Triangle{
 
 int main(){
     Triangle tri(12, 15, 19);
-    tri.triNature();
+    tri.triangleType();
 }
