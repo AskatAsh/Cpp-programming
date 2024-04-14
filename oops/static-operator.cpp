@@ -21,18 +21,24 @@ class Hero{
     void setLevel(char ch){
         level = ch;
     }
+    static int random(){
+        return timeToLevel;
+    }
 };
 
-int Hero::timeToLevel = 10;
+int Hero::timeToLevel = 55;
 
 int main(){
-    cout<<Hero::timeToLevel<<endl;
 
-    Hero hr;
-    cout<<hr.timeToLevel<<endl;
+    cout<<Hero::random()<<endl;
+
+    // cout<<Hero::timeToLevel<<endl;
+
+    // Hero hr;
+    // cout<<hr.timeToLevel<<endl;
     
-    Hero hi;
-    hi.timeToLevel = 5;
-    cout<<hi.timeToLevel<<endl;
-    cout<<hr.timeToLevel<<endl;
+    // Hero hi;
+    // hi.timeToLevel = 5;
+    // cout<<hi.timeToLevel<<endl;
+    // cout<<hr.timeToLevel<<endl;
 }
