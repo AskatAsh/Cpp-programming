@@ -4,9 +4,11 @@ using namespace std;
 class Example{
     public:
     int add(int a, int b){
+        cout<<"First function"<<endl;
         return a+b;
     }
     double add(double a, double b){
+        cout<<"Second function"<<endl;
         return a+b;
     }
     void add(char ch){
