@@ -1,19 +1,18 @@
+// #include<bits/stdc++.h>
 #include<iostream>
 #include<string>
+#include<algorithm>
+#include<cctype>
 using namespace std;
 
 int find_vowels(string &str){
     string vowels = "aeiou";
-    string s;
+    string s = str;
     int vowel_count = 0;
-    for(int i=0; i<str.length(); i++){
-        s += tolower(str[i]);
-    }
-    for(int i=0; i<s.length(); i++){
-        for(int j=0; j<vowels.length(); j++){
-            if(vowels[j] == s[i]){
-                vowel_count++;
-            }
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
+    for(char c:s){
+        if(vowels.find(c) != string::npos){
+            vowel_count++;
         }
     }
     return vowel_count;

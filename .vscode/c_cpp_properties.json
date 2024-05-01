@@ -3,7 +3,12 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:\\MinGW\\include",
+                "C:\\MinGW\\include\\ddk",
+                "C:\\MinGW\\include\\gdiplus",
+                "C:\\MinGW\\include\\GL",
+                "C:\\MinGW\\include\\sys"
             ],
             "defines": [
                 "_DEBUG",
