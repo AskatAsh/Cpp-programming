@@ -3,18 +3,15 @@
 #include<algorithm>
 using namespace std;
 
-string check_palindrome(string &str){
+bool check_palindrome(const string &str){
     string s = str;
-    reverse(str.begin(), str.end());
-    if(s == str){
-        return "true";
-    }
-    return "false";
+    reverse(s.begin(), s.end());
+    return s == str;
 }
 int main()
 {
     string str;
     cout<<"Enter a string: ";
     cin>>str;
-    cout<<check_palindrome(str)<<endl;
+    cout<<(check_palindrome(str) ? "true" : "false")<<endl;
 }
