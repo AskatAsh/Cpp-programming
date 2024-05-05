@@ -15,9 +15,9 @@ void find_number(int array[], int size, int value)
     if(count != 0){
         cout<<"FOUND at index position: ";
         for(int i=0; i<count-1; i++){
-            cout<<found_nums[i];
+            cout<<found_nums[i]<<", ";
         }
-        cout<<", "<<found_nums[count-1];
+        cout<<found_nums[count-1]<<endl;
     }
     else cout<<"NOT FOUND"<<endl;
 }
