@@ -6,10 +6,10 @@ int binary_search(int array[], int value, int low, int high)
     if(low<=high){
         int mid = (low+high)/2;
         if(array[mid] == value) return mid;
-        else if(value < array[mid]) binary_search(array, value, low, mid-1);
-        else binary_search(array, value, mid+1, high);
+        else if(value < array[mid]) return binary_search(array, value, low, mid-1);
+        else return binary_search(array, value, mid+1, high);
     }
-    else return -1;
+    return -1;
 }
 
 int main(){
