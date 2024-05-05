@@ -4,7 +4,8 @@
         "cmath": "cpp",
         "ostream": "cpp",
         "iosfwd": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "array": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
