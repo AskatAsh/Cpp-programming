@@ -2,30 +2,6 @@
 #include <algorithm>
 using namespace std;
 
-void bubble_sort(int array[], int size)
-{
-    // 14 11 1  5  4
-    // 0  1  2  3  4
-    for (int i = 1; i < size; i++) //i = 3
-    {
-        int count = 0;
-        for (int j = 0; j < size - 1; j++) // j = 0
-        {
-            if (array[j] > array[j + 1])
-            {
-                swap(array[j], array[j + 1]);
-            }
-            if(array[size-j-1] > array[size-j-2])
-            {
-                count++;
-            }
-        }
-        // 1 5 4 11 14
-        cout<<"loop count: "<<i<<endl;
-        if(count == size-1) break;
-    }
-}
-
 void print_array(int array[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -33,6 +9,26 @@ void print_array(int array[], int size)
         cout << array[i] << " ";
     }
     cout << endl;
+}
+
+void bubble_sort(int array[], int size)
+{
+    for (int i = 1; i < size; i++)
+    {
+        bool swaped = false;
+        cout<<"loop count: "<<i<<endl;
+        cout<<endl;
+        for (int j = 0; j < size-i; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                swap(array[j], array[j + 1]);
+                swaped = true;
+            }
+            print_array(array, size);
+        }
+        if(!swaped) break;
+    }
 }
 
 int main()
