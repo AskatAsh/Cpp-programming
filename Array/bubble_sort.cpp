@@ -8,7 +8,7 @@ void bubble_sort(int array[], int size)
     // 0  1  2  3  4
     for(int i=1; i<size; i++){
         for(int j=0; j<size-1; j++){ // j = 3
-            if(array[j] > array[j+1])
+            if(array[j] < array[j+1])
             {
                 swap(array[j], array[j+1]);
             }
