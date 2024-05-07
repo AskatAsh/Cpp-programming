@@ -11,26 +11,54 @@ void print_array(int array[], int size)
     cout << endl;
 }
 
-int find_insert_position(int array[], int size, int value, int low, int high)
+int find_insert_position(int array[], int value, int low, int high)
 {
-    int mid = low + (high-low) / 2;
-    if (value == array[mid])
-        return mid;
-    else if (array[mid] > value) high = mid-1;
-    else low = mid+1;
+    while (low <= high)
+    {
+        int mid = low + (high - low) / 2;
+        if (value == array[mid])
+            return mid;
+        else if (array[mid] > value)
+            high = mid - 1;
+        else
+            low = mid + 1;
+    }
     return low;
 }
 
 void insert_element(int array[], int &size, int value)
 {
-    int insert_pos = find_insert_position(array, size, value, 0, size - 1);
-    for (int i = size - 1; i >= insert_pos; i--)
+    if (value > array[size - 1])
     {
-        array[i + 1] = array[i];
+        cout<<"if executed"<<endl;
+        array[size] = value;
+        size++;
+        print_array(array, size);
     }
-    array[insert_pos] = value;
-    size++;
-    print_array(array, size);
+    else if (value < array[0])
+    {
+        cout<<"else if executed"<<endl;
+        for (int i = size - 1; i >= 0; i--)
+        {
+            array[i + 1] = array[i];
+        }
+        array[0] = value;
+        size++;
+        print_array(array, size);
+    }
+    else
+    {
+        cout<<"else executed"<<endl;
+        int insert_pos = find_insert_position(array, value, 0, size - 1);
+        cout << "Insert Position: " << insert_pos << endl;
+        for (int i = size - 1; i >= insert_pos; i--)
+        {
+            array[i + 1] = array[i];
+        }
+        array[insert_pos] = value;
+        size++;
+        print_array(array, size);
+    }
 }
 
 int main()
