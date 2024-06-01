@@ -5,7 +5,7 @@ int last_occurance(int arr[], int n, int value)
 {
     if(arr[n-1] == value) return n-1;
 
-    int left = 0, right = n-2, mid, index = -1;
+    int left = 0, right = n-1, mid, index = -1;
     while(left<=right)
     {
         mid = left+(right-left)/2;
