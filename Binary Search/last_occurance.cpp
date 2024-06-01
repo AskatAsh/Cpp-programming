@@ -1,18 +1,18 @@
 #include<iostream>
 using namespace std;
 
-int fist_occurance(int arr[], int n, int value)
+int last_occurance(int arr[], int n, int value)
 {
-    if(arr[0] == value) return 0;
+    if(arr[n-1] == value) return n-1;
 
-    int left = 1, right = n-1, mid, index = -1;
+    int left = 0, right = n-2, mid, index = -1;
     while(left<=right)
     {
         mid = left+(right-left)/2;
 
         if(arr[mid] == value){
             index = mid;
-            right = mid-1;
+            left = mid+1;
         }else if(arr[mid] < value){
             left = mid+1;
         }else{
@@ -38,10 +38,10 @@ int main()
     cout << "Value to search: ";
     cin >> value;
 
-    int ans = fist_occurance(arr, n, value);
+    int ans = last_occurance(arr, n, value);
     if(ans == -1){
         cout<<"Target value not found."<<endl;
     }else{
-        cout<<"Target first found at index: "<<ans<<endl;
+        cout<<"Target last found at index: "<<ans<<endl;
     }
 }
