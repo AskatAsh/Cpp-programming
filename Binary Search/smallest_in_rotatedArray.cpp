@@ -3,7 +3,7 @@ using namespace std;
 
 int smallest_in_rotated_array(int arr[], int n)
 {
-    int left = 0, right = n - 1, mid, smallest;
+    int left = 0, right = n - 1, mid;
 
     while (left < right)
     {
@@ -23,7 +23,7 @@ int smallest_in_rotated_array(int arr[], int n)
 
 int main()
 {
-    int n, value;
+    int n;
     cout << "Enter array size: ";
     cin >> n;
     int *arr = new int[n];
@@ -36,4 +36,7 @@ int main()
 
     int ans = smallest_in_rotated_array(arr, n);
     cout << "Smallest target found at index: " << ans << endl;
+
+    delete[] arr;
+    return 0;
 }
