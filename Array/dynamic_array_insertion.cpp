@@ -20,6 +20,16 @@ private:
         delete[] arr;
         arr = newArray;
     }
+    void decrease_size(){
+        cap = cap / 2;
+        int *newArray = new int[cap];
+        for(int i=0; i < size; i++)
+        {
+            newArray[i] = arr[i];
+        }
+        delete[] arr;
+        arr = newArray;
+    }
 
 public:
     Array()
@@ -76,6 +86,32 @@ public:
         }
         return arr[index];
     }
+    // complexity O(1)
+    void pop_value(){
+        if(size == 0){
+            cout<<"Current size is 0.\n";
+            return;
+        }
+        size--;
+        if(size == cap/2){
+            decrease_size();
+        }
+    }
+    // complexity O(size)
+    void delete_value(int pos)
+    {
+        if(pos>=size){
+            cout << "Error! Position " << pos << " doesn't exist.\n";
+            return;
+        }
+        for(int i=pos; i<size; i++){
+            arr[i] = arr[i+1];
+        }
+        size--;
+        if(size == cap/2){
+            decrease_size();
+        }
+    }
 };
 
 int main()
@@ -95,15 +131,24 @@ int main()
 
     arr.print();
 
-    int arraySize = arr.getSize();
-    cout << "Current size of the array is: " << arraySize << endl;
+    // int arraySize = arr.getSize();
+    // cout << "Current size of the array is: " << arraySize << endl;
 
-    int idx = 2;
-    int element = arr.getElement(idx);
-    if (element != -1)
-    {
-        cout << "Current element in index " << idx << " is: " << element << endl;
-    }
+    // int idx = 2;
+    // int element = arr.getElement(idx);
+    // if (element != -1)
+    // {
+    //     cout << "Current element in index " << idx << " is: " << element << endl;
+    // }
+
+    arr.pop_value();
+    arr.print();
+    arr.pop_value();
+    arr.print();
+    arr.delete_value(2);
+    arr.print();
+    arr.delete_value(4);
+    arr.print();
 
     return 0;
 }
