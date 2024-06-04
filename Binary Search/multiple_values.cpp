@@ -2,6 +2,8 @@
 #include<algorithm>
 using namespace std;
 
+// time complexity O((n+q)logn)
+// space complexity O(n+q)
 int main()
 {
     int n,q;
@@ -46,4 +48,9 @@ int main()
             cout<<"NO"<<endl;
         }
     }
+
+    delete[] arr;
+    delete[] queries;
+
+    return 0;
 }
