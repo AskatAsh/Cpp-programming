@@ -19,7 +19,8 @@ vector<int> quick_sort(vector<int> &arr)
         return arr;
     }
     int pivot;
-    pivot = arr.size()/2;
+    // pivot = arr.size()/2;
+    pivot = rand()%(arr.size());
     vector<int>left,right;
     for(int i=0; i<arr.size(); i++)
     {
